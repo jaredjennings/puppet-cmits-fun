@@ -16,5 +16,6 @@
 # \subsection{Remove fun things}
 
 class fun::no {
-    include "fun::no::${::osfamily}"
+    $lower_osfamily = downcase($::osfamily)
+    include "fun::no::${lower_osfamily}"
 }
